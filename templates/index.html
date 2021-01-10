@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automatyczna wycena mieszkania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="main">
+
+        <form class="main-form" action="/" method="post">
+            <h2>Bezpłatna wycena mieszkania</h2>
+            <p>Potrzebujesz szybko wycenić mieszkanie? Skorzystaj z naszego automatycznego narzędzia, które analizuje
+                ogłoszenia w Twojej okolicy i na tej bazie szacuje wartość Twojej nieruchomości. Wynik analizy otrzymasz
+                od razu po wypełnieniu formularza.</p>
+            <label for="city">Miasto</label>
+            <br>
+            <select id="citySelect" name="city" required>
+                <option value="0">Kraków</option>
+                <!-- <option value="1">Warszawa</option>
+                <option value="2">Łódź</option> -->
+            </select>
+
+            <div class="main-panel">
+                <div class="main-panel-sub">
+                    <label for="location">Lokalizacja</label>
+                    <select id="locationSelect" name="location"  required>
+                        <option value="0">Bieńczyce</option>
+                        <option value="1">Bieżanów-Prokocim</option>
+                        <option value="2">Bronowice</option>
+                        <option value="3">Dębniki</option>
+                        <option value="4">Grzegórzki</option>
+                        <option value="5">Krowodrza</option>
+                        <option value="6">Łagiewniki-Borek Fałęcki</option>
+                        <option value="7">Mistrzejowice</option>
+                        <option value="8">Nowa Huta</option>
+                        <option value="9">Podgórze</option>
+                        <option value="10">Podgórze Duchackie</option>
+                        <option value="11">Prądnik Biały</option>
+                        <option value="12">Prądnik Czerwony</option>
+                        <option value="13">Śródmieście</option>
+                        <option value="14">Stare Miasto</option>
+                        <option value="15">Swoszowice</option>
+                        <option value="16">Wzgórza Krzesławickie</option>
+                        <option value="17">Zwierzyniec</option>
+                    </select>
+                    <label for="area">Powierzchnia [m²]</label>
+                    <input type="number" placeholder="np. 70" name="area" min="0" required>
+
+                    <label for="year">Rok wybudowania</label>
+                    <input type="number" name="year" placeholder="np. 2010" required>
+                </div>
+                <div class="main-panel-sub">
+                    <label for="rooms">Liczba pokoi</label>
+                    <input type="number" placeholder="np. 3" name="rooms" min="0" required>
+
+                    <label for="level">Poziom (parter - 0)</label>
+                    <input type="number" placeholder="np. 1" name="level" min="0" required>
+
+                    <label for="state">Stan</label>
+                    <select name="state" id="" required>
+                        <option value="2">Do zamieszkania</option>
+                        <option value="1">Do wykończenia</option>
+                        <option value="0">Do remontu</option>
+                    </select>
+                </div>
+
+
+            </div>
+            <button type="submit" class="main-form-btn">Wyceń</button>
+        </form>
+
+    </div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

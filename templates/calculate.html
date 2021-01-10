@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatyczna wycena mieszkania</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="main">
+        <h2>Szacunkowa wartość nieruchomości na bazie podanych wynosi:</h2>
+        <!-- <p>Szacunkowa wartość nieruchomości na bazie podanych wynosi:</p> -->
+        <h1 class="prediction">{{context.prediction}} zł</h1>
+        <span class="prediction-sub">*cena jest wyłącznie szacunkowa</span>
+        <div class="main-panel">
+
+            <div class="main-panel-sub">
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/location-blue.png') }}" class="icon" alt="Lokalizacja">
+                    <span>{{context.location}}, {{context.city}}</span>
+                </div>
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/area-blue.png') }}" class="icon" alt="Powierzchnia">
+                    <span>{{context.area}} m²</span>
+                </div>
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/year-blue.png') }}" class="icon" alt="Rok wybudowania">
+                    <span>{{context.year}} r.</span>
+                </div>
+            </div>
+
+            <div class="main-panel-sub">
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/rooms-blue.png') }}" class="icon" alt="Pokoje">
+                    <span>{{context.rooms}} pokoje</span>
+                </div>
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/level-blue.png') }}" class="icon" alt="Poziom">
+                    <span>{{context.level}}</span>
+                </div>
+                <div class="main-panel-sub-row">
+                    <img src="{{ url_for('static', filename='icons/state-blue.png') }}" class="icon" alt="Stan">
+                    <span>{{context.state}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

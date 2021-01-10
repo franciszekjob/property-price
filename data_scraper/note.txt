@@ -1,0 +1,27 @@
+DATA DESCRIPTION
+--------------------------------
+--------------------------------
+state
+do remontu - 0
+do wykończenia - 1
+do zamieszkania  - 2
+--------------------------------
+location
+Bieńczyce - 0
+Bieżanów-Prokocim - 1
+Bronowice - 2
+Dębniki - 3
+Grzegórzki - 4
+Krowodrza - 5
+Łagiewniki-Borek Fałęcki - 6
+Mistrzejowice - 7
+Nowa Huta - 8
+Podgórze - 9
+Podgórze Duchackie - 10
+Prądnik Biały - 11
+Prądnik Czerwony - 12
+Śródmieście - 13
+Stare Miasto - 14
+Swoszowice - 15
+Wzgórza Krzesławickie - 16
+Zwierzyniec - 17
