@@ -73,5 +73,10 @@ def calculate():
     return render_template('calculate.html', title='Home', context=context)
 
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html', )
+
+
 if __name__ == "__main__":
     app.run()

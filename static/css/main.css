@@ -29,7 +29,7 @@ body {
   background-color: white;
   padding: 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -122,4 +122,11 @@ input:focus {
     display: flex;
     flex-direction: column;
   }
+}
+
+h1{
+margin-bottom:0px;
+}
+a{
+color:black;
 }
